@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demostración académica de reserva de horas médicas con Docker y Nginx.">
+  <title>Centro Médico Salud Integral | Reserva de horas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="brand-mark" aria-hidden="true">+</div>
+      <div>
+        <p class="eyebrow">CENTRO MÉDICO</p>
+        <h1>Salud Integral</h1>
+      </div>
+      <span class="demo-tag">Demostración académica</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow">ATENCIÓN ACCESIBLE Y ORGANIZADA</p>
+      <h2 id="intro-title">Reserva de horas médicas</h2>
+      <p>Explora una simulación de solicitud de hora médica. Este sitio es una demostración estática: no recibe, transmite ni almacena reservas.</p>
+      <div class="status"><span class="status-dot" aria-hidden="true"></span><span>Estado del sitio: disponible para demostración</span></div>
+    </section>
+
+    <div class="layout">
+      <section class="panel" aria-labelledby="form-title">
+        <h3 id="form-title">Formulario de reserva (simulación)</h3>
+        <p class="muted">Selecciona una especialidad y una fecha de ejemplo. No ingreses información personal ni clínica.</p>
+        <form>
+          <label for="specialty">Especialidad médica</label>
+          <select id="specialty" name="specialty">
+            <option value="">Selecciona una especialidad</option>
+            <option>Medicina general</option>
+            <option>Cardiología</option>
+            <option>Traumatología</option>
+            <option>Pediatría</option>
+          </select>
+
+          <label for="date">Fecha referencial</label>
+          <input id="date" name="date" type="date">
+
+          <label for="period">Horario preferido</label>
+          <select id="period" name="period">
+            <option value="">Selecciona un horario</option>
+            <option>Mañana (08:00–12:00)</option>
+            <option>Tarde (14:00–18:00)</option>
+          </select>
+
+          <p class="privacy-note">Este formulario no cuenta con un servidor de procesamiento. El botón es únicamente demostrativo.</p>
+          <button type="button" aria-label="Simulación: no se envía ninguna reserva">Simular reserva (sin envío)</button>
+        </form>
+      </section>
+
+      <aside class="panel details" aria-labelledby="details-title">
+        <h3 id="details-title">Información de atención</h3>
+        <div class="info-block"><strong>Horario</strong><p>Lunes a viernes: 08:00 a 18:00</p></div>
+        <div class="info-block"><strong>Especialidades disponibles</strong><p>Medicina general, cardiología, traumatología y pediatría (ficticias).</p></div>
+        <div class="info-block"><strong>Entorno de ejecución</strong><p>HTML + CSS publicados con Nginx en un contenedor Docker.</p></div>
+        <div class="info-block"><strong>Acceso local</strong><p><code>http://localhost:8080</code></p></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Proyecto académico DevOps · No es un servicio médico real · No ingresar datos sensibles</div>
+  </footer>
+</body>
+</html>
